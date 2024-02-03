@@ -1,10 +1,10 @@
-package sesac.sesacspringboot.controller;
+package sesac.sesacspringboot.api.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import sesac.sesacspringboot.dto.UserDTO;
-import sesac.sesacspringboot.vo.UserVO;
+import sesac.sesacspringboot.api.dto.UserDTO;
+import sesac.sesacspringboot.api.vo.UserVO;
 
 @Controller
 //@RestController // @Controller + @ResponseBody -> 모든 응답이 데이터를 보내는 경우엔 이 어노테이션을 사용하고 @ResponseBody 별도로 안 붙여도 됨
