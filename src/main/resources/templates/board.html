@@ -23,11 +23,12 @@
                 writer: form.writer.value,
             };
 
-            axios.post(`/write`, data).then((res) => {
+            axios.post(`/board/write`, data).then((res) => {
                 location.reload();
             });
         }
         function editBoard(id) {
+            console.log("수정 누름")
             var form = document.getElementById('form_board');
             var data = {
                 id,
@@ -35,7 +36,7 @@
                 content: form.content.value,
                 writer: form.writer.value,
             };
-            axios.patch(`/board`, data).then((res) => {
+            axios.patch(`/board/edit`, data).then((res) => {
                 location.reload();
             });
         }
@@ -74,7 +75,7 @@
     <!--    타임리프 문법 이용해서 게시판 글 보여주기 -->
     <tr th:each="board:${boardList}">
         <td>
-            <p th:text="${board.getId()}"></p>
+            <p th:text="${board.getNo()}"></p>
         </td>
         <td>
             <p th:text="${board.getId()}"></p>
@@ -89,7 +90,7 @@
             <p th:text="${board.getRegistered()}"></p>
         </td>
         <td >
-            <button th:onclick="editBoard(${board.getId()})"> 수정 </button>
+            <button th:onclick="editBoard([[${board.getId()}]])"> 수정 </button>
         </td>
         <td >
             <button th:onclick="deleteBoard([[${board.getId()}]])"> 삭제 </button>

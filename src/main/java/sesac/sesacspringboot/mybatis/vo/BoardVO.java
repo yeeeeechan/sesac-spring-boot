@@ -1,4 +1,4 @@
-package sesac.sesacspringboot.vo;
+package sesac.sesacspringboot.mybatis.vo;
 
 import lombok.Getter;
 

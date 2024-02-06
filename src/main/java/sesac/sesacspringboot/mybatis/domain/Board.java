@@ -1,4 +1,4 @@
-package sesac.sesacspringboot.dto;
+package sesac.sesacspringboot.mybatis.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,10 +7,10 @@ import java.sql.Timestamp;
 
 @Getter
 @Setter
-public class BoardDTO {
+public class Board {
+    private int id;
     private String title;
     private String content;
     private String writer;
-    private int id;
     private Timestamp registered;
 }
